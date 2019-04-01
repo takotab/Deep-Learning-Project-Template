@@ -5,3 +5,6 @@ __pycache__
 .pypirc
 dist
 torchlib.egg-info
+env/*
+.pytest_cache/*
+MNIST/*

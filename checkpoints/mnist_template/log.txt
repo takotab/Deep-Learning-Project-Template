@@ -1,0 +1,166 @@
+2019-04-01 20:15:01,061 template_model INFO: Using 1 GPUS
+2019-04-01 20:15:01,061 template_model INFO: Namespace(config_file='configs/train_mnist_softmax.yml', opts=[])
+2019-04-01 20:15:01,061 template_model INFO: Loaded configuration file configs/train_mnist_softmax.yml
+2019-04-01 20:15:01,062 template_model INFO: 
+
+SOLVER:
+  BASE_LR: 0.01
+  WEIGHT_DECAY: 0.0001
+  IMS_PER_BATCH: 128
+
+TEST:
+  IMS_PER_BATCH: 256
+
+OUTPUT_DIR: "checkpoints/mnist_template"
+
+2019-04-01 20:15:01,062 template_model INFO: Running with config:
+DATALOADER:
+  NUM_WORKERS: 8
+DATASETS:
+  TEST: ()
+  TRAIN: ()
+INPUT:
+  MAX_SCALE_TRAIN: 1.2
+  MIN_SCALE_TRAIN: 0.5
+  PIXEL_MEAN: [0.1307]
+  PIXEL_STD: [0.3081]
+  PROB: 0.5
+  SIZE_TEST: 32
+  SIZE_TRAIN: 32
+MODEL:
+  DEVICE: cuda
+  NUM_CLASSES: 10
+OUTPUT_DIR: checkpoints/mnist_template
+SOLVER:
+  BASE_LR: 0.01
+  BIAS_LR_FACTOR: 2
+  CHECKPOINT_PERIOD: 10
+  GAMMA: 0.1
+  IMS_PER_BATCH: 128
+  LOG_PERIOD: 100
+  MAX_EPOCHS: 50
+  MOMENTUM: 0.9
+  OPTIMIZER_NAME: SGD
+  STEPS: (30000,)
+  WARMUP_FACTOR: 0.3333333333333333
+  WARMUP_ITERS: 500
+  WARMUP_METHOD: linear
+  WEIGHT_DECAY: 0.0001
+  WEIGHT_DECAY_BIAS: 0
+TEST:
+  IMS_PER_BATCH: 256
+  WEIGHT: 
+2019-04-01 20:15:01,092 template_model.train INFO: Start training
+2019-04-01 20:15:04,835 template_model.train INFO: Epoch[1] Iteration[100/469] Loss: 1.83
+2019-04-01 20:15:06,572 template_model.train INFO: Epoch[1] Iteration[200/469] Loss: 1.08
+2019-04-01 20:15:08,229 template_model.train INFO: Epoch[1] Iteration[300/469] Loss: 0.73
+2019-04-01 20:15:09,896 template_model.train INFO: Epoch[1] Iteration[400/469] Loss: 0.56
+2019-04-01 20:15:13,892 template_model.train INFO: Training Results - Epoch: 1 Avg accuracy: 0.842 Avg Loss: 0.477
+2019-04-01 20:15:14,488 template_model.train INFO: Validation Results - Epoch: 1 Avg accuracy: 0.923 Avg Loss: 0.246
+2019-04-01 20:15:14,488 template_model.train INFO: Epoch 1 done. Time per batch: 7.455[s] Speed: 8052.4[samples/s]
+2019-04-01 20:15:16,320 template_model.train INFO: Epoch[2] Iteration[100/469] Loss: 0.42
+2019-04-01 20:15:17,922 template_model.train INFO: Epoch[2] Iteration[200/469] Loss: 0.36
+2019-04-01 20:15:19,573 template_model.train INFO: Epoch[2] Iteration[300/469] Loss: 0.31
+2019-04-01 20:15:21,206 template_model.train INFO: Epoch[2] Iteration[400/469] Loss: 0.29
+2019-04-01 20:15:25,192 template_model.train INFO: Training Results - Epoch: 2 Avg accuracy: 0.899 Avg Loss: 0.311
+2019-04-01 20:15:25,803 template_model.train INFO: Validation Results - Epoch: 2 Avg accuracy: 0.960 Avg Loss: 0.125
+2019-04-01 20:15:25,804 template_model.train INFO: Epoch 2 done. Time per batch: 7.222[s] Speed: 8312.0[samples/s]
+2019-04-01 20:15:27,666 template_model.train INFO: Epoch[3] Iteration[100/469] Loss: 0.26
+2019-04-01 20:15:29,267 template_model.train INFO: Epoch[3] Iteration[200/469] Loss: 0.27
+2019-04-01 20:15:30,921 template_model.train INFO: Epoch[3] Iteration[300/469] Loss: 0.26
+2019-04-01 20:15:32,580 template_model.train INFO: Epoch[3] Iteration[400/469] Loss: 0.24
+2019-04-01 20:15:36,520 template_model.train INFO: Training Results - Epoch: 3 Avg accuracy: 0.912 Avg Loss: 0.276
+2019-04-01 20:15:37,122 template_model.train INFO: Validation Results - Epoch: 3 Avg accuracy: 0.968 Avg Loss: 0.121
+2019-04-01 20:15:37,122 template_model.train INFO: Epoch 3 done. Time per batch: 7.228[s] Speed: 8306.0[samples/s]
+2019-04-01 20:15:38,964 template_model.train INFO: Epoch[4] Iteration[100/469] Loss: 0.22
+2019-04-01 20:15:40,575 template_model.train INFO: Epoch[4] Iteration[200/469] Loss: 0.22
+2019-04-01 20:15:42,178 template_model.train INFO: Epoch[4] Iteration[300/469] Loss: 0.22
+2019-04-01 20:15:43,812 template_model.train INFO: Epoch[4] Iteration[400/469] Loss: 0.21
+2019-04-01 20:15:47,849 template_model.train INFO: Training Results - Epoch: 4 Avg accuracy: 0.919 Avg Loss: 0.241
+2019-04-01 20:15:48,454 template_model.train INFO: Validation Results - Epoch: 4 Avg accuracy: 0.970 Avg Loss: 0.086
+2019-04-01 20:15:48,454 template_model.train INFO: Epoch 4 done. Time per batch: 7.195[s] Speed: 8343.1[samples/s]
+2019-04-01 20:15:50,285 template_model.train INFO: Epoch[5] Iteration[100/469] Loss: 0.20
+2019-04-01 20:15:51,933 template_model.train INFO: Epoch[5] Iteration[200/469] Loss: 0.21
+2019-04-01 20:15:53,537 template_model.train INFO: Epoch[5] Iteration[300/469] Loss: 0.19
+2019-04-01 20:15:55,105 template_model.train INFO: Epoch[5] Iteration[400/469] Loss: 0.19
+2019-04-01 20:15:59,087 template_model.train INFO: Training Results - Epoch: 5 Avg accuracy: 0.938 Avg Loss: 0.191
+2019-04-01 20:15:59,686 template_model.train INFO: Validation Results - Epoch: 5 Avg accuracy: 0.976 Avg Loss: 0.080
+2019-04-01 20:15:59,686 template_model.train INFO: Epoch 5 done. Time per batch: 7.143[s] Speed: 8404.0[samples/s]
+2019-04-01 20:16:01,508 template_model.train INFO: Epoch[6] Iteration[100/469] Loss: 0.18
+2019-04-01 20:16:03,121 template_model.train INFO: Epoch[6] Iteration[200/469] Loss: 0.18
+2019-04-01 20:16:04,726 template_model.train INFO: Epoch[6] Iteration[300/469] Loss: 0.17
+2019-04-01 20:16:06,343 template_model.train INFO: Epoch[6] Iteration[400/469] Loss: 0.17
+2019-04-01 20:16:10,329 template_model.train INFO: Training Results - Epoch: 6 Avg accuracy: 0.946 Avg Loss: 0.165
+2019-04-01 20:16:10,963 template_model.train INFO: Validation Results - Epoch: 6 Avg accuracy: 0.980 Avg Loss: 0.064
+2019-04-01 20:16:10,963 template_model.train INFO: Epoch 6 done. Time per batch: 7.158[s] Speed: 8386.9[samples/s]
+2019-04-01 20:16:12,926 template_model.train INFO: Epoch[7] Iteration[100/469] Loss: 0.17
+2019-04-01 20:16:14,602 template_model.train INFO: Epoch[7] Iteration[200/469] Loss: 0.17
+2019-04-01 20:16:16,235 template_model.train INFO: Epoch[7] Iteration[300/469] Loss: 0.16
+2019-04-01 20:16:17,829 template_model.train INFO: Epoch[7] Iteration[400/469] Loss: 0.17
+2019-04-01 20:16:21,883 template_model.train INFO: Training Results - Epoch: 7 Avg accuracy: 0.945 Avg Loss: 0.170
+2019-04-01 20:16:22,507 template_model.train INFO: Validation Results - Epoch: 7 Avg accuracy: 0.982 Avg Loss: 0.056
+2019-04-01 20:16:22,507 template_model.train INFO: Epoch 7 done. Time per batch: 7.365[s] Speed: 8150.9[samples/s]
+2019-04-01 20:16:24,353 template_model.train INFO: Epoch[8] Iteration[100/469] Loss: 0.16
+2019-04-01 20:16:26,093 template_model.train INFO: Epoch[8] Iteration[200/469] Loss: 0.17
+2019-04-01 20:16:27,829 template_model.train INFO: Epoch[8] Iteration[300/469] Loss: 0.16
+2019-04-01 20:16:29,496 template_model.train INFO: Epoch[8] Iteration[400/469] Loss: 0.16
+2019-04-01 20:16:33,607 template_model.train INFO: Training Results - Epoch: 8 Avg accuracy: 0.949 Avg Loss: 0.158
+2019-04-01 20:16:34,211 template_model.train INFO: Validation Results - Epoch: 8 Avg accuracy: 0.979 Avg Loss: 0.068
+2019-04-01 20:16:34,212 template_model.train INFO: Epoch 8 done. Time per batch: 7.484[s] Speed: 8021.6[samples/s]
+2019-04-01 20:16:36,046 template_model.train INFO: Epoch[9] Iteration[100/469] Loss: 0.17
+2019-04-01 20:16:37,698 template_model.train INFO: Epoch[9] Iteration[200/469] Loss: 0.16
+2019-04-01 20:16:39,399 template_model.train INFO: Epoch[9] Iteration[300/469] Loss: 0.15
+2019-04-01 20:16:41,050 template_model.train INFO: Epoch[9] Iteration[400/469] Loss: 0.15
+2019-04-01 20:16:45,173 template_model.train INFO: Training Results - Epoch: 9 Avg accuracy: 0.949 Avg Loss: 0.156
+2019-04-01 20:16:45,798 template_model.train INFO: Validation Results - Epoch: 9 Avg accuracy: 0.986 Avg Loss: 0.047
+2019-04-01 20:16:45,798 template_model.train INFO: Epoch 9 done. Time per batch: 7.340[s] Speed: 8178.5[samples/s]
+2019-04-01 20:16:47,705 template_model.train INFO: Epoch[10] Iteration[100/469] Loss: 0.15
+2019-04-01 20:16:49,409 template_model.train INFO: Epoch[10] Iteration[200/469] Loss: 0.16
+2019-04-01 20:16:51,098 template_model.train INFO: Epoch[10] Iteration[300/469] Loss: 0.16
+2019-04-01 20:16:52,734 template_model.train INFO: Epoch[10] Iteration[400/469] Loss: 0.15
+2019-04-01 20:16:56,807 template_model.train INFO: Training Results - Epoch: 10 Avg accuracy: 0.953 Avg Loss: 0.143
+2019-04-01 20:16:57,408 template_model.train INFO: Validation Results - Epoch: 10 Avg accuracy: 0.984 Avg Loss: 0.053
+2019-04-01 20:16:57,408 template_model.train INFO: Epoch 10 done. Time per batch: 7.439[s] Speed: 8069.7[samples/s]
+2019-04-01 20:16:59,243 template_model.train INFO: Epoch[11] Iteration[100/469] Loss: 0.13
+2019-04-01 20:17:00,879 template_model.train INFO: Epoch[11] Iteration[200/469] Loss: 0.14
+2019-04-01 20:17:02,503 template_model.train INFO: Epoch[11] Iteration[300/469] Loss: 0.15
+2019-04-01 20:17:04,154 template_model.train INFO: Epoch[11] Iteration[400/469] Loss: 0.15
+2019-04-01 20:17:08,179 template_model.train INFO: Training Results - Epoch: 11 Avg accuracy: 0.950 Avg Loss: 0.151
+2019-04-01 20:17:08,828 template_model.train INFO: Validation Results - Epoch: 11 Avg accuracy: 0.985 Avg Loss: 0.047
+2019-04-01 20:17:08,828 template_model.train INFO: Epoch 11 done. Time per batch: 7.221[s] Speed: 8313.0[samples/s]
+2019-04-01 20:17:10,756 template_model.train INFO: Epoch[12] Iteration[100/469] Loss: 0.14
+2019-04-01 20:17:12,455 template_model.train INFO: Epoch[12] Iteration[200/469] Loss: 0.14
+2019-04-01 20:17:14,188 template_model.train INFO: Epoch[12] Iteration[300/469] Loss: 0.15
+2019-04-01 20:17:15,875 template_model.train INFO: Epoch[12] Iteration[400/469] Loss: 0.14
+2019-04-01 20:17:19,939 template_model.train INFO: Training Results - Epoch: 12 Avg accuracy: 0.954 Avg Loss: 0.141
+2019-04-01 20:17:20,555 template_model.train INFO: Validation Results - Epoch: 12 Avg accuracy: 0.987 Avg Loss: 0.041
+2019-04-01 20:17:20,555 template_model.train INFO: Epoch 12 done. Time per batch: 7.518[s] Speed: 7985.5[samples/s]
+2019-04-01 20:17:22,405 template_model.train INFO: Epoch[13] Iteration[100/469] Loss: 0.12
+2019-04-01 20:17:24,127 template_model.train INFO: Epoch[13] Iteration[200/469] Loss: 0.13
+2019-04-01 20:17:25,838 template_model.train INFO: Epoch[13] Iteration[300/469] Loss: 0.13
+2019-04-01 20:17:27,592 template_model.train INFO: Epoch[13] Iteration[400/469] Loss: 0.13
+2019-04-01 20:17:31,764 template_model.train INFO: Training Results - Epoch: 13 Avg accuracy: 0.955 Avg Loss: 0.136
+2019-04-01 20:17:32,384 template_model.train INFO: Validation Results - Epoch: 13 Avg accuracy: 0.988 Avg Loss: 0.039
+2019-04-01 20:17:32,385 template_model.train INFO: Epoch 13 done. Time per batch: 7.555[s] Speed: 7945.6[samples/s]
+2019-04-01 20:17:34,278 template_model.train INFO: Epoch[14] Iteration[100/469] Loss: 0.14
+2019-04-01 20:17:36,004 template_model.train INFO: Epoch[14] Iteration[200/469] Loss: 0.14
+2019-04-01 20:17:37,745 template_model.train INFO: Epoch[14] Iteration[300/469] Loss: 0.13
+2019-04-01 20:17:39,448 template_model.train INFO: Epoch[14] Iteration[400/469] Loss: 0.13
+2019-04-01 20:17:43,597 template_model.train INFO: Training Results - Epoch: 14 Avg accuracy: 0.957 Avg Loss: 0.129
+2019-04-01 20:17:44,200 template_model.train INFO: Validation Results - Epoch: 14 Avg accuracy: 0.987 Avg Loss: 0.042
+2019-04-01 20:17:44,200 template_model.train INFO: Epoch 14 done. Time per batch: 7.586[s] Speed: 7913.2[samples/s]
+2019-04-01 20:17:46,159 template_model.train INFO: Epoch[15] Iteration[100/469] Loss: 0.16
+2019-04-01 20:17:47,916 template_model.train INFO: Epoch[15] Iteration[200/469] Loss: 0.15
+2019-04-01 20:17:49,619 template_model.train INFO: Epoch[15] Iteration[300/469] Loss: 0.14
+2019-04-01 20:17:51,292 template_model.train INFO: Epoch[15] Iteration[400/469] Loss: 0.12
+2019-04-01 20:17:55,517 template_model.train INFO: Training Results - Epoch: 15 Avg accuracy: 0.957 Avg Loss: 0.130
+2019-04-01 20:17:56,155 template_model.train INFO: Validation Results - Epoch: 15 Avg accuracy: 0.984 Avg Loss: 0.052
+2019-04-01 20:17:56,155 template_model.train INFO: Epoch 15 done. Time per batch: 7.584[s] Speed: 7915.8[samples/s]
+2019-04-01 20:17:58,056 template_model.train INFO: Epoch[16] Iteration[100/469] Loss: 0.13
+2019-04-01 20:17:59,733 template_model.train INFO: Epoch[16] Iteration[200/469] Loss: 0.13
+2019-04-01 20:18:01,372 template_model.train INFO: Epoch[16] Iteration[300/469] Loss: 0.14
+2019-04-01 20:18:03,022 template_model.train INFO: Epoch[16] Iteration[400/469] Loss: 0.13
+2019-04-01 20:18:07,108 template_model.train INFO: Training Results - Epoch: 16 Avg accuracy: 0.959 Avg Loss: 0.125
+2019-04-01 20:18:07,765 template_model.train INFO: Validation Results - Epoch: 16 Avg accuracy: 0.986 Avg Loss: 0.045
+2019-04-01 20:18:07,765 template_model.train INFO: Epoch 16 done. Time per batch: 7.341[s] Speed: 8177.8[samples/s]
+2019-04-01 20:18:09,646 template_model.train INFO: Epoch[17] Iteration[100/469] Loss: 0.13
