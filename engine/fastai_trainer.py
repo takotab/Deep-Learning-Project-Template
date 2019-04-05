@@ -9,7 +9,8 @@ import logging
 import fastai
 from fastai.basic_train import Learner
 from fastai.basic_data import DataBunch
-
+from fastai.train import fit_one_cycle
+from fastai.metrics import accuracy
 from utils import LoggingLog
 
 
@@ -20,7 +21,7 @@ def do_train(
     valid_dl,
     optimizer,
     loss_fn,
-    metrics=None,
+    metrics=[],
     callbacks: list = [],
 ):
 
