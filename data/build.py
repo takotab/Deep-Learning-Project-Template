@@ -6,12 +6,14 @@
 
 from torch.utils import data
 
-from .datasets.mnist import MNIST
+from .datasets.mnist import MNIST_adapted
 from .transforms import build_transforms
 
 
 def build_dataset(transforms, is_train=True):
-    datasets = MNIST(root='./', train=is_train, transform=transforms, download=True)
+    datasets = MNIST_adapted(
+        root="./", train=is_train, transform=transforms, download=True
+    )
     return datasets
 
 

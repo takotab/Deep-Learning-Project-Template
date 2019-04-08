@@ -13,8 +13,8 @@ from layers.conv_layer import conv3x3
 
 def conv_init(m):
     classname = m.__class__.__name__
-    if classname.find('Conv') != -1:
-        nn.init.xavier_uniform_(m.weight, gain=np.sqrt(2))
+    if classname.find("Conv") != -1:
+        nn.init.kaiming_normal_(m.weight, gain=np.sqrt(2))
         if m.bias is not None:
             nn.init.constant_(m.bias, 0)
 
@@ -32,8 +32,10 @@ class BasicBlock(nn.Module):
         self.shortcut = nn.Sequential()
         if stride != 1 or in_planes != self.expansion * planes:
             self.shortcut = nn.Sequential(
-                nn.Conv2d(in_planes, self.expansion * planes, kernel_size=1, stride=stride),
-                nn.BatchNorm2d(self.expansion * planes)
+                nn.Conv2d(
+                    in_planes, self.expansion * planes, kernel_size=1, stride=stride
+                ),
+                nn.BatchNorm2d(self.expansion * planes),
             )
 
     def forward(self, x):
